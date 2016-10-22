@@ -31,7 +31,4 @@ int main(int argc, char** argv)
 		printf("error on llopen.\n");
 		return -1;
 	}
-	
-	
-	
 }
