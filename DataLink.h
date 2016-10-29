@@ -1,10 +1,8 @@
-#ifndef LINKLAYER_H
-#define LINKLAYER_H
 
-int llopen(const char * path, int type);
-int sendPacket(int fd, char * buffer, int length);
-int receivePacket(int fd);
-int llwrite(int fd, char * buffer, int length);
+int startConnection(const char * path);
+int llopen(int fd, int type);
+int llwrite(int fd, const unsigned char* buffer, int length);
+int llread(int fd, unsigned char* buffer);
 int llclose (int fd, int type);
-
-#endif
+int sendPacket(int fd, char * buffer, int length);
+int receivePacket(int fd, unsigned char * buffer, int buffSize);
